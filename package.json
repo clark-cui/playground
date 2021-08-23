@@ -1,0 +1,22 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clark-cui/playground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clark-cui/playground/issues"
+  },
+  "homepage": "https://github.com/clark-cui/playground#readme",
+  "dependencies": {
+    "typescript": "^4.3.5"
+  }
+}
