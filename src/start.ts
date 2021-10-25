@@ -75,7 +75,7 @@ class Sun extends Parent{
   private son_money:number;
   constructor(name:string){
     super(name);
-    this.son_money=super.money;
+    this.son_money=this.money;
 
   }
 }
