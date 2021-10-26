@@ -18,3 +18,6 @@ if (random < 0.5)
     isOk = true;
 var what = isOk ? "string" : 123;
 console.log(what);
+var anyNum;
+anyNum = "seven";
+anyNum = 123;

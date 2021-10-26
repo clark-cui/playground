@@ -18,3 +18,19 @@ let isOk: boolean = false;
 if (random < 0.5) isOk = true;
 let what = isOk ? "string" : 123;
 console.log(what);
+
+let anyNum;
+anyNum = "seven";
+anyNum = 123;
+
+function logMe(x: any) {
+  console.log(x);
+}
+const obj2: { [k: string]: any } = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+for (const k in obj2) {
+  const v = obj2[k];
+}
