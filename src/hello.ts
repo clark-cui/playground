@@ -34,3 +34,6 @@ const obj2: { [k: string]: any } = {
 for (const k in obj2) {
   const v = obj2[k];
 }
+let x: void = undefined;
+// x = undefined;
+
