@@ -45,7 +45,7 @@ interface Person {
   name: string;
   age: number;
   password?: number;
-  [name: string | symbol]: unknown;
+  [name: string]: any;
 }
 let Clark: Person = {
   location: "WJ",
@@ -73,3 +73,34 @@ interface NumberArray {
 }
 let fibonacci: NumberArray = [1, 2, 3, 4];
 let fibo: Array<number | string> = [1, 2, 3, 4, "12"];
+
+let mySum: (x: number, y: number) => number = (
+  x: number,
+  y: number
+): number => {
+  return x + y;
+};
+
+let newSum: Function = (x: number, y: number): number => {
+  return x + y;
+};
+interface SearchFunc {
+  (source: string, subString: string): boolean;
+}
+let mySearch: SearchFunc = (source: string, subString: string): boolean => {
+  return source.search(subString) !== -1;
+};
+
+function buildName(firstName?: string, lastName: string = "Clark"): string {
+  if (firstName) {
+    return firstName + lastName;
+  }
+  return lastName;
+}
+
+function myPush(array: Array<unknown>, ...rest: Array<unknown>) {
+  rest.forEach((item) => {
+    array.push(item);
+  });
+}
+myPush([], 1, "2", 3, true);
