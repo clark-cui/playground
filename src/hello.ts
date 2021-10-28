@@ -37,3 +37,39 @@ for (const k in obj2) {
 let x: void = undefined;
 // x = undefined;
 
+let z: unknown = null;
+
+let unionType: number | string = "123";
+interface Person {
+  readonly location: string;
+  name: string;
+  age: number;
+  password?: number;
+  [name: string | symbol]: unknown;
+}
+let Clark: Person = {
+  location: "WJ",
+  name: "Clark",
+  age: 123,
+  h2: [1, 2, 3, 4],
+  h4: { x: 123, y: 789 },
+};
+
+interface A {
+  type: string;
+  game: number;
+}
+interface B {
+  count: number;
+}
+
+let ad: A & B = {
+  type: "ab",
+  game: 1,
+  count: 2,
+};
+interface NumberArray {
+  [index: number]: number;
+}
+let fibonacci: NumberArray = [1, 2, 3, 4];
+let fibo: Array<number | string> = [1, 2, 3, 4, "12"];
