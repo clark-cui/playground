@@ -115,3 +115,12 @@ function reverse(x: number | string): number | string | void {
   }
 }
 
+function reverse2(x: number): number;
+function reverse2(x: string): string;
+function reverse2(x: number | string): number | string | void {
+  if (typeof x === "number") {
+    return Number(x.toString().split("").reverse().join(""));
+  } else if (typeof x === "string") {
+    return x.split("").reverse().join("");
+  }
+}
